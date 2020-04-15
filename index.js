@@ -231,7 +231,7 @@ for(let i=.02; i<= .06;  i +=.005){
 
     monthlyPayment = payment.toFixed(2);
 
-    console.log("payment " +  monthlyPayment);
+   // console.log("payment " +  monthlyPayment);
 }
 }
 console.log("varInterestRatez " + variableInterestRate(200000, .10, 30,750));
@@ -248,7 +248,41 @@ console.log("varInterestRatez " + variableInterestRate(200000, .10, 30,750));
 
 /* 🏡 Build a calculator function that accepts `monthly payment` and `interest rate` and returns the maximum loan that a person could afford */
 
+// mortgageCalculator5 = (desiredMonthlyPayment) => {
+    
 
+    
+//         let principalAmt = 100000;
+//         let interestRate = .05;
+//         let years = 30;
+    
+//         let monthlyInterestRate;
+//         let periods;
+//         let monthlyPayment;
+    
+//         monthlyInterestRate = .05/12; //round or not?
+//         periods = years*12;
+    
+//         let base = 1 + monthlyInterestRate;
+//         let resultTop = Math.pow(base, periods);
+//         let numerator = resultTop * monthlyInterestRate;
+//         let denominator = Math.pow(base, periods) -1;
+//         let result = numerator/denominator;
+    
+//         payment = principalAmt * result;
+    
+//         monthlyPayment = payment.toFixed(2);
+//         //console.log("payment really? " + monthlyPayment);
+//         console.log()
+//     while(monthlyPayment < desiredMonthlyPayment){
+//             principalAmt = principalAmt +10000;
+//             console.log("princ amt " + principalAmt);
+//     }
+
+//     return monthlyPayment;
+// }
+// mortgageCalculator5(2000)
+//console.log(mortgageCalculator("bill"));
 
 //mortgageCalculator(2000000, 0.05, 30); <-- should return 1,073.64
 
@@ -274,7 +308,7 @@ console.log("Interest rate = " + interestRate);
     payment = principalAmt * result;
 
     monthlyPayment = payment.toFixed(2);
-console.log("User inputed respons " + monthlyPayment)
+console.log("User inputed response " + monthlyPayment)
     return monthlyPayment;
 }
 let amount = prompt("Enter amount of loan");
@@ -282,6 +316,6 @@ let rate = prompt("enter interest rate of loan");
 let numYears = prompt("Enter number of years for the loan")
 console.log("amt " + amount);
 mortgageCalculator4(amount, rate, numYears);
-// console.log(mortgageCalculator4(200000, .05, 30));
+
 
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates (make sure to copy and paste as to not lose your work!) */
