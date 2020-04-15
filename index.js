@@ -214,13 +214,13 @@ variableInterestRate = (amount, rate, numYears, score) => {
     }
     
     //console.log("rate " + interestRate);  
-    monthlyInterestRate = interestRate/12; //round or not?
-    periods = years*12;
+   
     
 for(let i=.02; i<= .06;  i +=.005){
-    console.log("turtle");
-}
-    let base = 1 + monthlyInterestRate;
+    
+    monthlyInterestRate = i/12; //round or not?
+    periods = years*12;
+    let base = 1 +monthlyInterestRate;
     let resultTop = Math.pow(base, periods);
     let numerator = resultTop * monthlyInterestRate;
     let denominator = Math.pow(base, periods) -1;
@@ -230,8 +230,8 @@ for(let i=.02; i<= .06;  i +=.005){
 
     monthlyPayment = payment.toFixed(2);
 
-    return monthlyPayment;
-
+    console.log("payment " +  monthlyPayment);
+}
 }
 console.log("varInterestRatez " + variableInterestRate(200000, .10, 30,750));
 
