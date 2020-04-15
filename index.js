@@ -1,7 +1,8 @@
 // 🌟🌟🌟 M V P 🌟🌟🌟//
 
 // 🏡 Task 1: Variables
-/* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
+/* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively
+. Create another value called name and give it the value of your own name.
 */
 let principalAmt = 200000;
 let interestRate = .05;
@@ -248,7 +249,39 @@ console.log("varInterestRatez " + variableInterestRate(200000, .10, 30,750));
 /* 🏡 Build a calculator function that accepts `monthly payment` and `interest rate` and returns the maximum loan that a person could afford */
 
 
-/* 🏡 Explore using `window.prompt()` to allow a user to input parameters in the browser */
 
+//mortgageCalculator(2000000, 0.05, 30); <-- should return 1,073.64
+
+mortgageCalculator4 = (amount, rate, numYears) => {
+    
+    let principalAmt = amount;
+    let interestRate = rate;
+    let years = numYears;
+console.log("Interest rate = " + interestRate);
+    let monthlyInterestRate;
+    let periods;
+    let monthlyPayment;
+
+    monthlyInterestRate = interestRate/12; //round or not?
+    periods = years*12;
+
+    let base = 1 + monthlyInterestRate;
+    let resultTop = Math.pow(base, periods);
+    let numerator = resultTop * monthlyInterestRate;
+    let denominator = Math.pow(base, periods) -1;
+    let result = numerator/denominator;
+
+    payment = principalAmt * result;
+
+    monthlyPayment = payment.toFixed(2);
+console.log("User inputed respons " + monthlyPayment)
+    return monthlyPayment;
+}
+let amount = prompt("Enter amount of loan");
+let rate = prompt("enter interest rate of loan");
+let numYears = prompt("Enter number of years for the loan")
+console.log("amt " + amount);
+mortgageCalculator4(amount, rate, numYears);
+// console.log(mortgageCalculator4(200000, .05, 30));
 
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates (make sure to copy and paste as to not lose your work!) */
