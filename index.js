@@ -199,6 +199,7 @@ variableInterestRate = (amount, rate, numYears, score) => {
     let monthlyInterestRate;
     let periods;
     let monthlyPayment;
+    let name ="bill";
 
     if (score > 740){
         newRate = rate - .05;
@@ -230,6 +231,7 @@ for(let i=.02; i<= .06;  i +=.005){
     payment = principalAmt * result;
 
     monthlyPayment = payment.toFixed(2);
+    console.log(`${name}, with an interest rate of 0.02, your monthly rate is ${monthlyPayment}`);
 
    // console.log("payment " +  monthlyPayment);
 }
